@@ -45,7 +45,7 @@ namespace SnakesLadders
                 }
                 Console.WriteLine("The final position is " + position);
             }
-
+            Console.WriteLine("Dice was thrown " + diceCount + " times");
         }
 
     }
