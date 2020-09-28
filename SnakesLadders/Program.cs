@@ -43,7 +43,7 @@ namespace SnakesLadders
                     }
 
                 }
-                Console.WriteLine("The final position is " + position);
+                
             }
 
         }
