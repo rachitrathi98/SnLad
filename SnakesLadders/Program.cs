@@ -6,53 +6,86 @@ namespace SnakesLadders
     {
         static void Main(string[] args)
         {
-            int position = 0;
+            int positionPlayer1 = 0;
+            int positionPlayer2 = 0;
             int diceCount = 0;
-            int diceNum;
-            int option;
+            int diceNum1;
+            int option1;
+            int diceNum2;
+            int option2;
             Random random = new Random();
-            while (position <= 100)
+            while (positionPlayer1 <= 100||positionPlayer2<=100)
             {
-                diceNum = random.Next(1, 7);
                 diceCount++;
-                option = random.Next(1, 4);
-                if (option == 1)// No Play
+                diceNum1 = random.Next(1, 7);
+                option1 = random.Next(1, 4);
+                diceNum2 = random.Next(1, 7);
+                option2 = random.Next(1, 4);
+                if (option1 == 1)// No Play
                 {
-                    position += 0;
+                    positionPlayer1 += 0;
                 }
-                if (option == 2)// Ladder
+                if (option1 == 2)// Ladder
                 {
-                    if (position + diceNum <= 100)
+                    if (positionPlayer1 + diceNum1 <= 100)
                     {
-                        position += diceNum;
+                        positionPlayer1 += diceNum1;
                     }
                     else
                     {
-                        position += 0;
+                        positionPlayer1 += 0;
                     }
                 }
                 else //Snake
                 {
-                    if (position - diceNum > 0)
+                    if (positionPlayer1 - diceNum1 > 0)
                     {
-                        position -= diceNum;
+                        positionPlayer1 -= diceNum1;
                     }
                     else
                     {
-                        position = 0;
+                        positionPlayer1 = 0;
                     }
 
                 }
-                Console.WriteLine("The final position is " + position);
+                Console.WriteLine("The final position is " + positionPlayer1);
+
+                if (option2 == 1)// No Play
+                {
+                    positionPlayer2 += 0;
+                }
+                if (option2 == 2)// Ladder
+                {
+                    if (positionPlayer2 + diceNum2 <= 100)
+                    {
+                        positionPlayer2 += diceNum2;
+                    }
+                    else
+                    {
+                        positionPlayer2 += 0;
+                    }
+                }
+                else //Snake
+                {
+                    if (positionPlayer2 - diceNum2 > 0)
+                    {
+                        positionPlayer2 -= diceNum2;
+                    }
+                    else
+                    {
+                        positionPlayer2 = 0;
+                    }
+
+                }
+                Console.WriteLine("The final position is " + positionPlayer2);
             }
+
             Console.WriteLine("Dice was thrown " + diceCount + " times");
         }
 
     }
 }
 
-            
-        }
-    }
+       
 
 
