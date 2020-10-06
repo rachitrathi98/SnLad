@@ -48,7 +48,7 @@ namespace SnakesLadders
                     }
 
                 }
-                Console.WriteLine("The final position is " + positionPlayer1);
+                Console.WriteLine("The final position of Player 1 is " + positionPlayer1);
 
                 if (option2 == 1)// No Play
                 {
@@ -77,7 +77,7 @@ namespace SnakesLadders
                     }
 
                 }
-                Console.WriteLine("The final position is " + positionPlayer2);
+                Console.WriteLine("The final position of Player 2 is " + positionPlayer2);
             }
 
             Console.WriteLine("Dice was thrown " + diceCount + " times");
